@@ -14,7 +14,7 @@ body {
 }
 
 body {
-  color: #000000;
+  color: #0b101a;
 }
 
 a {
@@ -23,5 +23,6 @@ a {
 }
 
 :where(.css-dev-only-do-not-override-1okl62o).ant-modal .ant-modal-content {
-  padding: 0 !important;
+  padding: 15px 24px 24px !important;
+  border-radius: 12px !important;
 }

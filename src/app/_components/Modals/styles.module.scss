@@ -1,0 +1,41 @@
+.modalText {
+  color: #0b101a;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  margin-top: 12px;
+}
+
+.btnContainer {
+  display: flex;
+  column-gap: 12px;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.btnCheck {
+  background-color: #2a3958;
+  color: #ffffff;
+  width: 170px;
+  height: 44px;
+
+  &:hover {
+    background-color: #232c3f !important;
+    color: #ffffff !important;
+    border: none !important;
+  }
+}
+
+.btnCancle {
+  background-color: #fff;
+  color: #2a3958;
+  border: 1px solid #2a3958;
+  width: 170px;
+  height: 44px;
+
+  &:hover {
+    background-color: #fff !important;
+    color: #2a3958 !important;
+    border: 1px solid #2a3958 !important;
+  }
+}
