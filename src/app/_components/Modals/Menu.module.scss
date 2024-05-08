@@ -12,3 +12,9 @@
 .item {
   padding-left: 16px !important;
 }
+
+@media screen and (max-width: 600px) {
+  .mainMenu {
+    width: 150px !important;
+  }
+}

@@ -84,15 +84,15 @@ const InvestmentType: React.FC<InvestmentTypeProps> = ({ icon, title, onClick, o
               <th className={styles.heading}>
                 <p>예치금잔액 <span className={styles.require}></span></p>
               </th>
-              <td className={`${styles.tableData} ${styles.investMenu}`}>
+              <td className={`${styles.tableData} ${styles.pl1}`}>
                 <MenuBar menuItems={investmentTypes} />
               </td>
             </tr>
             <tr className={styles.tableRow}>
-              <th className={styles.heading}>
+              <th className={`${styles.heading} ${styles.headingb}`}>
                 <p>투자건수 <span className={styles.require}></span></p>
               </th>
-              <td className={`${styles.tableData} ${styles.investMenu}`}>
+              <td className={`${styles.tableData} ${styles.pl1}`}>
                 <div>파일 선택</div>
               </td>
             </tr>
