@@ -6,6 +6,7 @@ import Image from "next/image";
 import BasicModal from './_components/Modals/BasicModal';
 import { Button, Modal } from 'antd';
 import InvestmentType from './_components/Modals/InvestmentType';
+import ApprovalRejection from './_components/Modals/ApprovalRejection';
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -25,11 +26,18 @@ export default function Home() {
         onClose={() => setOpen(false)}
       /> */}
 
-      <InvestmentType
+      {/* <InvestmentType
+        onClick={() => { }}
+        open={open}
+        onClose={() => setOpen(false)}
+      /> */}
+
+      <ApprovalRejection
         onClick={() => { }}
         open={open}
         onClose={() => setOpen(false)}
       />
+
     </div>
   );
 }
