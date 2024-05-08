@@ -1,3 +1,7 @@
+.basicModal {
+  padding: 15px 24px 24px;
+}
+
 .modalText {
   color: #0b101a;
   font-size: 18px;
@@ -18,6 +22,7 @@
   color: #ffffff;
   width: 170px;
   height: 44px;
+  border-radius: 10px;
 
   &:hover {
     background-color: #232c3f !important;
@@ -32,6 +37,123 @@
   border: 1px solid #2a3958;
   width: 170px;
   height: 44px;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: #fff !important;
+    color: #2a3958 !important;
+    border: 1px solid #2a3958 !important;
+  }
+}
+
+//investment Modal
+
+.investmentModal {
+  color: #0b101a;
+  padding: 24px 0;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  padding-left: 24px;
+}
+
+.investmentContent {
+  border-top: 1px solid #d7d8da;
+  border-bottom: 1px solid #d7d8da;
+  margin: 20px 0 25px;
+  padding: 24px 24px 32px;
+
+  ul {
+    margin-left: 24px;
+  }
+}
+
+.table {
+  border: 1px solid #d7d8da;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 8px;
+}
+.tableRow {
+  height: 49px;
+}
+.heading {
+  background-color: #ebeef3;
+  font-size: 16px;
+  font-weight: 500;
+  width: 160px;
+  text-align: left;
+  padding-left: 20px;
+  border-bottom: 1px solid #fff;
+
+  p {
+    position: relative;
+    display: inline;
+
+    span {
+      position: absolute;
+      z-index: 100;
+      width: 5px;
+      height: 5px;
+      right: -8px;
+      border-radius: 50%;
+      background-color: red;
+    }
+  }
+}
+
+.tableData {
+  padding-left: 20px;
+  font-size: 14px;
+  border-bottom: 1px solid #d7d8da;
+
+  div {
+    width: 76px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ebeef3;
+    border: 1px solid #d7d8da;
+    font-size: 14px;
+    letter-spacing: -0.02px;
+    border-radius: 8px;
+  }
+}
+
+.investMenu {
+  padding-left: 10px;
+}
+
+.investmentBtns {
+  display: flex;
+  column-gap: 10px;
+  justify-content: center;
+}
+
+.btnCheck1 {
+  background-color: #2a3958;
+  color: #ffffff;
+  width: 160px;
+  height: 44px;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: #232c3f !important;
+    color: #ffffff !important;
+    border: none !important;
+  }
+}
+
+.btnCancle1 {
+  background-color: #fff;
+  color: #2a3958;
+  border: 1px solid #2a3958;
+  width: 160px;
+  height: 44px;
+  border-radius: 10px;
 
   &:hover {
     background-color: #fff !important;

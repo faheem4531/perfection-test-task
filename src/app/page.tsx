@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import Image from "next/image";
 import BasicModal from './_components/Modals/BasicModal';
 import { Button, Modal } from 'antd';
+import InvestmentType from './_components/Modals/InvestmentType';
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -23,6 +24,15 @@ export default function Home() {
         open={open}
         onClose={() => setOpen(false)}
       /> */}
+
+      <InvestmentType
+        cancleBtn={true}
+        icon="alert"
+        title={"투자유형을 변경하시겠습니까?"}
+        onClick={() => { }}
+        open={open}
+        onClose={() => setOpen(false)}
+      />
     </div>
   );
 }

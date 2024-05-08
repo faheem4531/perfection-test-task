@@ -28,15 +28,17 @@ const BasicModal: React.FC<BasicModalProps> = ({ icon, title, onClick, open, onC
       width={400}
       footer={null}
     >
-      <Image src={icon === 'alert' ? Warning : Check} alt="modal icon" />
-      <p className={styles.modalText}>{title}</p>
-      <div className={styles.btnContainer}>
-        <Button className={styles.btnCheck} onClick={onClick} >
-          확인
-        </Button>
-        {cancleBtn && <Button className={styles.btnCancle} onClick={onClose} >
-          취소
-        </Button>}
+      <div className={styles.basicModal}>
+        <Image src={icon === 'alert' ? Warning : Check} alt="modal icon" />
+        <p className={styles.modalText}>{title}</p>
+        <div className={styles.btnContainer}>
+          <Button className={styles.btnCheck} onClick={onClick} >
+            확인
+          </Button>
+          {cancleBtn && <Button className={styles.btnCancle} onClick={onClose} >
+            취소
+          </Button>}
+        </div>
       </div>
     </Modal>
   );
