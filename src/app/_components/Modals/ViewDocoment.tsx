@@ -41,7 +41,7 @@ const ViewDocoment: React.FC<ViewDocomentProps> = ({ onClick, open, onClose, tit
       onCancel={onClose}
       width={800}
       footer={null}
-      className={styles.customModalContent}
+      className={styles.customModalContentDoc}
     >
       <div className={styles.investmentModal}>
         <p className={styles.title}>{title}</p>
