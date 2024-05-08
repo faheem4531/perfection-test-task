@@ -89,7 +89,7 @@ const InvestmentType: React.FC<InvestmentTypeProps> = ({ onClick, open, onClose 
                 <p>투자건수 <span className={styles.require}></span></p>
               </th>
               <td className={`${styles.tableData} ${styles.pl1}`}>
-                <div>파일 선택</div>
+                <div className={styles.files}>파일 선택</div>
               </td>
             </tr>
           </table>

@@ -52,6 +52,10 @@ a {
   margin: 0;
 }
 
+.ant-checkbox-checked .ant-checkbox-inner {
+  border: 1px solid #b1b4bb !important;
+  background-color: #dde0e5 !important;
+}
 @media screen and (max-width: 600px) {
   :where(.css-dev-only-do-not-override-1okl62o).ant-menu-light .ant-menu-submenu-selected > .ant-menu-submenu-title {
     width: 150px !important;

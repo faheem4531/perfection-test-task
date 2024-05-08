@@ -2,6 +2,10 @@
 
 import React from 'react';
 import { Button, Modal } from 'antd';
+import { Checkbox } from 'antd';
+import type { CheckboxProps } from 'antd';
+import { Input } from 'antd';
+const { TextArea } = Input;
 
 import styles from "./styles.module.scss"
 import MenuBar from './manuBar/Menu';
@@ -9,42 +13,17 @@ import MenuBar from './manuBar/Menu';
 interface ApprovalRejectionProps {
   onClick: () => void;
   open: boolean;
+  title: string;
   onClose: () => void
 }
 
-const ApprovalRejection: React.FC<ApprovalRejectionProps> = ({ onClick, open, onClose }) => {
 
-  const investmentTypes = [
-    {
-      key: "11",
-      label: "일반개인",
-      value: "일반개인",
-    },
-    {
-      key: "12",
-      label: "소득적격",
-      value: "소득적격",
-    }, {
-      key: "13",
-      label: "개인전문",
-      value: "개인전문",
-    },
-    {
-      key: "14",
-      label: "법인",
-      value: "법인",
-    },
-    {
-      key: "15",
-      label: "여신금융",
-      value: "여신금융",
-    },
-    {
-      key: "16",
-      label: "P2P온투",
-      value: "P2P온투",
-    },
-  ]
+const ApprovalRejection: React.FC<ApprovalRejectionProps> = ({ onClick, open, onClose, title }) => {
+
+  const onChange: CheckboxProps['onChange'] = (e) => {
+    console.log(`checked = ${e.target.checked}`);
+  };
+
 
   return (
     <Modal
@@ -57,7 +36,7 @@ const ApprovalRejection: React.FC<ApprovalRejectionProps> = ({ onClick, open, on
       className={styles.customModalContent}
     >
       <div className={styles.investmentModal}>
-        <p className={styles.title}>투자유형 변경</p>
+        <p className={styles.title}>{title}</p>
         <div className={styles.investmentContent}>
           <table className={styles.table}>
             <tr className={styles.tableRow}>
@@ -65,7 +44,7 @@ const ApprovalRejection: React.FC<ApprovalRejectionProps> = ({ onClick, open, on
                 회원번호
               </th>
               <td className={styles.tableData}>
-                abc111
+                abc111, abc222
               </td>
             </tr>
             <tr className={styles.tableRow}>
@@ -73,30 +52,46 @@ const ApprovalRejection: React.FC<ApprovalRejectionProps> = ({ onClick, open, on
                 회원명/법인명
               </th>
               <td className={styles.tableData}>
-                김길동
+                김길동, ㈜가나다라투자
               </td>
             </tr>
             <tr className={styles.tableRow}>
-              <th className={styles.heading}>
-                <p>예치금잔액 <span className={styles.require}></span></p>
+              <th className={`${styles.heading} ${styles.headingCb}`}>
+                <p>승인거부 사유 <span className={styles.require}></span></p>
               </th>
-              <td className={`${styles.tableData} ${styles.pl1}`}>
-                <MenuBar menuItems={investmentTypes} />
-              </td>
-            </tr>
-            <tr className={styles.tableRow}>
-              <th className={`${styles.heading} ${styles.headingb}`}>
-                <p>투자건수 <span className={styles.require}></span></p>
-              </th>
-              <td className={`${styles.tableData} ${styles.pl1}`}>
-                <div>파일 선택</div>
+              <td className={`${styles.tableData}`}>
+                <div className={styles.cbBox}>
+                  <Checkbox className={styles.cb} onChange={onChange}>서류 식별 불가</Checkbox>
+                  <Checkbox className={styles.cb} onChange={onChange}>필수 서류 누락</Checkbox>
+                  <Checkbox className={styles.cb} onChange={onChange}>서류의 내용이 등록된 회원정보와 다름</Checkbox>
+                  <Checkbox className={styles.cb} onChange={onChange}>서류에 누락된 내용이 있음 (필수정보, 회사직인, 본인날인, 본인서명 등)</Checkbox>
+                  <Checkbox className={styles.cb} onChange={onChange}>서류의 유효기간이 초과됨</Checkbox>
+                  <Checkbox className={styles.cb} onChange={onChange}>직접 입력</Checkbox>
+                  <TextArea rows={4} className={styles.textArea}
+                    style={{
+                      resize: 'none', height: "100px", marginTop: "10px",
+                      overflowY: "auto", backgroundColor: "#DDE0E5", border: "1px solid #B1B4BB",
+                      fontSize: "14px", lineHeight: "16.71px", padding: "10px", borderRadius: "8px"
+                    }} />
+                </div>
               </td>
             </tr>
           </table>
-          <ul>
-            <li>파일 형식은 jpg, jpeg, gif, png, pdf만 가능합니다.</li>
-            <li>최대 10개, 100MB까지 등록이 가능합니다.</li>
-          </ul>
+          <div className={styles.inputContainer}>
+            <div>
+              <div>최근저장일시</div>
+              <Input placeholder="Basic usage"
+                style={{ width: "214px", fontSize: "14px", borderRadius: "0", height: "40px", border: "none", boxShadow: "none" }}
+              />
+            </div>
+            <div>
+              <div>관리자</div>
+              <Input placeholder="Basic usage"
+                style={{ width: "214px", fontSize: "14px", borderRadius: "0", height: "40px", border: "none", boxShadow: "none" }}
+              />
+            </div>
+          </div>
+
         </div>
         <div className={styles.investmentBtns}>
           <Button className={styles.btnCheck1} onClick={onClick} >

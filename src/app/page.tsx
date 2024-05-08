@@ -34,6 +34,7 @@ export default function Home() {
 
       <ApprovalRejection
         onClick={() => { }}
+        title="승인거부 사유 확인"
         open={open}
         onClose={() => setOpen(false)}
       />

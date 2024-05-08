@@ -110,11 +110,11 @@
 }
 
 .tableData {
-  padding-left: 20px;
+  padding: 0 20px;
   font-size: 14px;
   border-bottom: 1px solid #d7d8da;
 
-  div {
+  .files {
     width: 76px;
     height: 37px;
     display: flex;
@@ -185,5 +185,104 @@
     font-size: 14px;
     width: 100px;
     padding-left: 10px;
+  }
+}
+
+//Aproval rejection modal
+.headingCb {
+  height: 300px;
+}
+
+.cbBox {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  div {
+    height: 100px;
+    background-color: red;
+  }
+}
+
+.cb {
+  font-size: 14px;
+  color: #0b101a;
+  margin-bottom: 5px;
+}
+
+.textArea {
+  resize: 'none';
+}
+
+.textArea::-webkit-scrollbar {
+  width: 7px;
+}
+
+.textArea::-webkit-scrollbar-track {
+  background: #e6e8ea;
+}
+
+.textArea::-webkit-scrollbar-thumb {
+  background-color: #6f80a0;
+  border-radius: 4px;
+}
+
+.textArea::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.inputContainer {
+  display: flex;
+  margin-top: 18px;
+  column-gap: 4px;
+
+  div {
+    width: 50%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #d7d8da;
+
+    //title
+    div {
+      width: 160px;
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+      font-size: 15px;
+      font-weight: 500;
+      background-color: #eef0f4;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .inputContainer {
+    flex-direction: column;
+    margin-top: 10px;
+    row-gap: 4px;
+
+    div {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .inputContainer {
+    div {
+      width: 100%;
+
+      div {
+        width: 100px;
+        padding-left: 10px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .cb {
+    font-size: 12px;
+    margin-bottom: 2px;
   }
 }
