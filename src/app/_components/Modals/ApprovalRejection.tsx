@@ -8,7 +8,6 @@ import { Input } from 'antd';
 const { TextArea } = Input;
 
 import styles from "./styles.module.scss"
-import MenuBar from './manuBar/Menu';
 
 interface ApprovalRejectionProps {
   onClick: () => void;
