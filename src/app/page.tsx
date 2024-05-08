@@ -19,9 +19,9 @@ export default function Home() {
       <DataTable />
 
 
-      {/* <Button type="primary" onClick={() => setOpen(true)}>
+      <Button type="primary" onClick={() => setOpen(true)}>
         Open Modal of 1000px width
-      </Button> */}
+      </Button>
 
 
 
