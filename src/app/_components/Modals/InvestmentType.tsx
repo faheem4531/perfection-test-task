@@ -4,7 +4,7 @@ import React from 'react';
 import { Button, Modal } from 'antd';
 
 import styles from "./styles.module.scss"
-import MenuBar from './manuBar/Menu';
+import MenuBar from '../manuBar/Menu';
 
 interface InvestmentTypeProps {
   onClick: () => void;
