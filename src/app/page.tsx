@@ -3,11 +3,12 @@
 import React, { useState } from 'react';
 
 import Image from "next/image";
-import BasicModal from './_components/Modals/BasicModal';
+import BasicModal from './_components/modals/BasicModal';
 import { Button, Modal } from 'antd';
-import InvestmentType from './_components/Modals/InvestmentType';
-import ApprovalRejection from './_components/Modals/ApprovalRejection';
-import ViewDocoment from './_components/Modals/ViewDocoment';
+import InvestmentType from './_components/modals/InvestmentType';
+import ApprovalRejection from './_components/modals/ApprovalRejection';
+import ViewDocoment from './_components/modals/ViewDocoment';
+import DataTable from './_components/dataTable/DataTable';
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -15,9 +16,16 @@ export default function Home() {
 
   return (
     <div >
-      <Button type="primary" onClick={() => setOpen(true)}>
+      <DataTable />
+
+
+      {/* <Button type="primary" onClick={() => setOpen(true)}>
         Open Modal of 1000px width
-      </Button>
+      </Button> */}
+
+
+
+
       {/* <BasicModal
         cancleBtn={true}
         icon="alert"
@@ -27,11 +35,11 @@ export default function Home() {
         onClose={() => setOpen(false)}
       /> */}
 
-      {/* <InvestmentType
+      <InvestmentType
         onClick={() => { }}
         open={open}
         onClose={() => setOpen(false)}
-      /> */}
+      />
 
       {/* <ApprovalRejection
         onClick={() => { }}
@@ -40,12 +48,12 @@ export default function Home() {
         onClose={() => setOpen(false)}
       /> */}
 
-      <ViewDocoment
+      {/* <ViewDocoment
         onClick={() => { }}
         title="서류 보기"
         open={open}
         onClose={() => setOpen(false)}
-      />
+      /> */}
 
     </div>
   );

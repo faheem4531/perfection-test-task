@@ -2,12 +2,12 @@
 
 import React from 'react';
 import { Button, Modal } from 'antd';
+import Image from 'next/image';
 
 import styles from "./styles.module.scss"
 import Doc1 from "@/app/_assets/png/doc1.png"
 import Doc2 from "@/app/_assets/png/doc2.png"
 import Doc3 from "@/app/_assets/png/doc3.png"
-import Image from 'next/image';
 
 interface ViewDocomentProps {
   onClick: () => void;
@@ -48,7 +48,7 @@ const ViewDocoment: React.FC<ViewDocomentProps> = ({ onClick, open, onClose, tit
         <div className={styles.investmentContent}>
 
           <div className={styles.docParent}>
-            <div className={styles.heading}><p>서류 <span className={styles.require}></span></p></div>
+            <div className={`${styles.heading} ${styles.aligment}`}><p>서류 <span className={styles.require}></span></p></div>
 
             <div className={styles.docSlider}>
               {docs.map((item, index) =>

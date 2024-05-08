@@ -81,7 +81,7 @@ const InvestmentType: React.FC<InvestmentTypeProps> = ({ onClick, open, onClose 
                 <p>예치금잔액 <span className={styles.require}></span></p>
               </th>
               <td className={`${styles.tableData} ${styles.pl1}`}>
-                <MenuBar menuItems={investmentTypes} />
+                <MenuBar menuItems={investmentTypes} width="256px" />
               </td>
             </tr>
             <tr className={styles.tableRow}>

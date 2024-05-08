@@ -1,5 +1,5 @@
-:root {
-}
+// :root {
+// }
 
 * {
   box-sizing: border-box;
@@ -31,7 +31,6 @@ a {
   color: #141f2d !important;
   border: 1px solid #b1b4bb !important;
   margin: 0px 0 5px !important;
-  width: 256px !important;
   height: 37px !important;
   padding-left: 12px !important;
 }
@@ -56,6 +55,13 @@ a {
   border: 1px solid #b1b4bb !important;
   background-color: #dde0e5 !important;
 }
+
+:where(.css-dev-only-do-not-override-1okl62o).ant-pagination .ant-pagination-item-active a {
+  color: #fff !important;
+  background-color: #2a3958;
+  border-radius: 4px;
+}
+
 @media screen and (max-width: 600px) {
   :where(.css-dev-only-do-not-override-1okl62o).ant-menu-light .ant-menu-submenu-selected > .ant-menu-submenu-title {
     width: 150px !important;

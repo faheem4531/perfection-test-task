@@ -287,11 +287,13 @@
 
 .heading {
   width: 160px;
-  min-height: 150px;
-  display: flex;
-  align-items: center;
   padding-left: 20px;
   background-color: #eef0f4;
+}
+
+.aligment {
+  display: flex;
+  align-items: center;
 }
 
 .docSlider {

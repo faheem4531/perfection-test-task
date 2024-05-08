@@ -12,9 +12,10 @@ interface MenuItem {
 
 interface MenuBarProps {
   menuItems: MenuItem[];
+  width: string;
 }
 
-const MenuBar: React.FC<MenuBarProps> = ({ menuItems }) => {
+const MenuBar: React.FC<MenuBarProps> = ({ menuItems, width }) => {
   const [selectedItem, setSelectedItem] = useState<MenuItem | null>(menuItems[0]);
 
   const handleMenuItemClick = (item: MenuItem) => {
@@ -25,7 +26,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ menuItems }) => {
     <Menu
       mode="inline"
       defaultSelectedKeys={[selectedItem?.key || '11']}
-      style={{ width: 256, height: 37 }}
+      style={{ width: width, height: 37 }}
       className={styles.mainMenu}
       onClick={(e) => {
         const clickedItem = menuItems.find((item) => item.key === e.key);
