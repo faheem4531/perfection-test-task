@@ -44,6 +44,8 @@ a {
 }
 
 :where(.css-dev-only-do-not-override-1okl62o).ant-menu-light.ant-menu-inline .ant-menu-sub.ant-menu-inline {
+  position: relative !important;
+  z-index: 100 !important;
   background-color: #fff;
   border: 1px solid #b1b4bb !important;
   border-radius: 8px !important;
@@ -53,7 +55,7 @@ a {
 
 .ant-checkbox-checked .ant-checkbox-inner {
   border: 1px solid #b1b4bb !important;
-  background-color: #dde0e5 !important;
+  background-color: #0b101a !important;
 }
 
 :where(.css-dev-only-do-not-override-1okl62o).ant-pagination .ant-pagination-item-active a {
