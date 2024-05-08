@@ -197,11 +197,6 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-
-  div {
-    height: 100px;
-    background-color: red;
-  }
 }
 
 .cb {
@@ -225,10 +220,6 @@
 .textArea::-webkit-scrollbar-thumb {
   background-color: #6f80a0;
   border-radius: 4px;
-}
-
-.textArea::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
 }
 
 .inputContainer {
@@ -285,4 +276,50 @@
     font-size: 12px;
     margin-bottom: 2px;
   }
+}
+
+//View Docoment
+.docParent {
+  border: 1px solid #d7d8da;
+  border-radius: 10px;
+  display: flex;
+}
+.heading {
+  width: 160px;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  background-color: #eef0f4;
+}
+
+.docSlider {
+  margin: 15px;
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  max-height: 620px;
+  overflow-y: auto;
+}
+
+.docSlider::-webkit-scrollbar {
+  width: 7px;
+}
+
+.docSlider::-webkit-scrollbar-track {
+  background: #e6e8ea;
+}
+
+.docSlider::-webkit-scrollbar-thumb {
+  background-color: #6f80a0;
+  border-radius: 20px;
+}
+
+.docImg {
+  border-radius: 10px;
+  border: 1px solid #b1b4bb;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 8px;
 }

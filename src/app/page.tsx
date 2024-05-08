@@ -7,6 +7,7 @@ import BasicModal from './_components/Modals/BasicModal';
 import { Button, Modal } from 'antd';
 import InvestmentType from './_components/Modals/InvestmentType';
 import ApprovalRejection from './_components/Modals/ApprovalRejection';
+import ViewDocoment from './_components/Modals/ViewDocoment';
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -32,9 +33,16 @@ export default function Home() {
         onClose={() => setOpen(false)}
       /> */}
 
-      <ApprovalRejection
+      {/* <ApprovalRejection
         onClick={() => { }}
         title="승인거부 사유 확인"
+        open={open}
+        onClose={() => setOpen(false)}
+      /> */}
+
+      <ViewDocoment
+        onClick={() => { }}
+        title="서류 보기"
         open={open}
         onClose={() => setOpen(false)}
       />
