@@ -26,9 +26,6 @@ export default function Home() {
       /> */}
 
       <InvestmentType
-        cancleBtn={true}
-        icon="alert"
-        title={"투자유형을 변경하시겠습니까?"}
         onClick={() => { }}
         open={open}
         onClose={() => setOpen(false)}

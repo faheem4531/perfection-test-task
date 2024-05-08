@@ -7,7 +7,7 @@ const { SubMenu } = Menu;
 interface MenuItem {
   key: string;
   label: string;
-  value: string; // Assuming each menu item has a 'value' property
+  value: string;
 }
 
 interface MenuBarProps {
@@ -15,7 +15,7 @@ interface MenuBarProps {
 }
 
 const MenuBar: React.FC<MenuBarProps> = ({ menuItems }) => {
-  const [selectedItem, setSelectedItem] = useState<MenuItem | null>(menuItems[0]); // Set default selected item
+  const [selectedItem, setSelectedItem] = useState<MenuItem | null>(menuItems[0]);
 
   const handleMenuItemClick = (item: MenuItem) => {
     setSelectedItem(item);
@@ -24,7 +24,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ menuItems }) => {
   return (
     <Menu
       mode="inline"
-      defaultSelectedKeys={[selectedItem?.key || '11']} // Use selectedItem key to highlight the selected item
+      defaultSelectedKeys={[selectedItem?.key || '11']}
       style={{ width: 256, height: 37 }}
       className={styles.mainMenu}
       onClick={(e) => {
@@ -34,7 +34,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ menuItems }) => {
         }
       }}
     >
-      <SubMenu key="1" title={selectedItem.value} className={styles.subMenu}>
+      <SubMenu key="1" title={selectedItem ? selectedItem.value : 'Default Title'} className={styles.subMenu}>
         {menuItems.map((item) => (
           <Menu.Item key={item.key} className={styles.item}>
             <span onClick={() => handleMenuItemClick(item)}>{item.label}</span>

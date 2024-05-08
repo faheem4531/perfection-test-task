@@ -2,21 +2,17 @@
 
 import React from 'react';
 import { Button, Modal } from 'antd';
-import Image from 'next/image';
 
 import styles from "./styles.module.scss"
-import MenuBar from './Menu';
+import MenuBar from './manuBar/Menu';
 
 interface InvestmentTypeProps {
-  icon: string;
-  title: string;
   onClick: () => void;
   open: boolean;
   onClose: () => void
-  cancleBtn: boolean
 }
 
-const InvestmentType: React.FC<InvestmentTypeProps> = ({ icon, title, onClick, open, onClose, cancleBtn }) => {
+const InvestmentType: React.FC<InvestmentTypeProps> = ({ onClick, open, onClose }) => {
 
   const investmentTypes = [
     {
@@ -106,9 +102,9 @@ const InvestmentType: React.FC<InvestmentTypeProps> = ({ icon, title, onClick, o
           <Button className={styles.btnCheck1} onClick={onClick} >
             확인
           </Button>
-          {cancleBtn && <Button className={styles.btnCancle1} onClick={onClose} >
+          <Button className={styles.btnCancle1} onClick={onClose} >
             취소
-          </Button>}
+          </Button>
         </div>
       </div>
     </Modal>
