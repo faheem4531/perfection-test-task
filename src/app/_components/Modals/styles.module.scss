@@ -97,8 +97,8 @@
     span {
       position: absolute;
       z-index: 100;
-      width: 5px;
-      height: 5px;
+      width: 4px;
+      height: 4px;
       right: -8px;
       border-radius: 50%;
       background-color: red;
@@ -143,6 +143,8 @@
   color: #ffffff;
   width: 160px;
   height: 44px;
+  font-size: 16px;
+  font-weight: 600;
   border-radius: 10px;
 
   &:hover {
@@ -155,6 +157,8 @@
 .btnCancle1 {
   background-color: #fff;
   color: #2a3958;
+  font-size: 16px;
+  font-weight: 600;
   border: 1px solid #2a3958;
   width: 160px;
   height: 44px;
@@ -285,9 +289,13 @@
   display: flex;
 }
 
+.border {
+  border: 1px solid #d7d8da;
+}
+
 .heading {
   width: 160px;
-  padding-left: 20px;
+  padding-left: 15px;
   background-color: #eef0f4;
 }
 

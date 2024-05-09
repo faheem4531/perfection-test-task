@@ -46,24 +46,22 @@ const ViewDocoment: React.FC<ViewDocomentProps> = ({ onClick, open, onClose, tit
       <div className={styles.investmentModal}>
         <p className={styles.title}>{title}</p>
         <div className={styles.investmentContent}>
-
           <div className={styles.docParent}>
             <div className={`${styles.heading} ${styles.aligment}`}><p>서류 <span className={styles.require}></span></p></div>
-
             <div className={styles.docSlider}>
               {docs.map((item, index) =>
                 <Image key={index} src={item.img} alt="img" className={styles.docImg} />
               )}
             </div>
           </div>
-
         </div>
+
         <div className={styles.investmentBtns}>
+          <Button className={`${styles.btnCancle1} ${styles.border}`} onClick={onClose} >
+            파일 다운로드
+          </Button>
           <Button className={styles.btnCheck1} onClick={onClick} >
             확인
-          </Button>
-          <Button className={styles.btnCancle1} onClick={onClose} >
-            취소
           </Button>
         </div>
       </div>
