@@ -11,8 +11,6 @@ import {
 } from '@ant-design/icons';
 
 import styles from "./DataTable.module.scss"
-import MenuBar from '../manuBar/Menu';
-import { approval, dateTime, notDefine, changeApprovalStatus } from "@/app/utlis/constants"
 import TableHead from '../tableHeader/Header';
 
 interface DataTableProps {

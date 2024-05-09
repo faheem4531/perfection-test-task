@@ -5,6 +5,7 @@ import { Button, Modal } from 'antd';
 
 import styles from "./styles.module.scss"
 import MenuBar from '../manuBar/Menu';
+import { investmentTypes } from "@/app/utlis/constants"
 
 interface InvestmentTypeProps {
   onClick: () => void;
@@ -14,37 +15,6 @@ interface InvestmentTypeProps {
 
 const InvestmentType: React.FC<InvestmentTypeProps> = ({ onClick, open, onClose }) => {
 
-  const investmentTypes = [
-    {
-      key: "11",
-      label: "일반개인",
-      value: "일반개인",
-    },
-    {
-      key: "12",
-      label: "소득적격",
-      value: "소득적격",
-    }, {
-      key: "13",
-      label: "개인전문",
-      value: "개인전문",
-    },
-    {
-      key: "14",
-      label: "법인",
-      value: "법인",
-    },
-    {
-      key: "15",
-      label: "여신금융",
-      value: "여신금융",
-    },
-    {
-      key: "16",
-      label: "P2P온투",
-      value: "P2P온투",
-    },
-  ]
 
   return (
     <Modal
