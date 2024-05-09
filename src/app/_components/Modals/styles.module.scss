@@ -63,10 +63,16 @@
   border-top: 1px solid #d7d8da;
   border-bottom: 1px solid #d7d8da;
   margin: 20px 0 25px;
-  padding: 21px 24px 32px;
+  padding: 18px 24px 32px;
 
   ul {
-    margin-left: 24px;
+    margin-left: 22px;
+
+    li {
+      font-size: 13px;
+      line-height: 19.5px;
+      letter-spacing: -0.02px;
+    }
   }
 }
 
@@ -87,7 +93,7 @@
   font-weight: 500;
   width: 160px;
   text-align: left;
-  padding-left: 20px;
+  padding-left: 16px;
   border-bottom: 1px solid #fff;
 
   p {
@@ -105,6 +111,7 @@
     }
   }
 }
+
 .headingb {
   border-bottom: none;
 }
@@ -128,13 +135,17 @@
   }
 }
 
+.investmentTypesContainer {
+  margin-left: -21px;
+}
+
 .pl1 {
-  padding-left: 10px;
+  padding-left: 8px;
 }
 
 .investmentBtns {
   display: flex;
-  column-gap: 10px;
+  column-gap: 8px;
   justify-content: center;
 }
 
