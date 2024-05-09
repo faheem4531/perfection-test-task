@@ -3,64 +3,6 @@
   color: #222222;
 }
 
-.header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #d7d8da;
-
-  h2 {
-    font-size: 20px;
-    font-weight: 600;
-
-    span {
-      color: #5a616a;
-      font-size: 14px;
-      font-weight: 500;
-    }
-  }
-
-  .headerOptions {
-    display: flex;
-    column-gap: 4px;
-  }
-}
-
-.afterHeder {
-  margin: 10px 0 6px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  .btnCheck {
-    background-color: #2a3958;
-    color: #ffffff;
-    width: 100px;
-    height: 39px;
-    border-radius: 10px;
-
-    &:hover {
-      background-color: #232c3f !important;
-      color: #ffffff !important;
-      border: none !important;
-    }
-  }
-
-  div {
-    display: flex;
-    align-items: center;
-    column-gap: 4px;
-
-    p {
-      margin-right: 10px;
-      color: #5a616a;
-      font-size: 14px;
-      font-weight: 500;
-    }
-  }
-}
 .tableWrapper {
   width: 100%;
 
