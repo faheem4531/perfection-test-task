@@ -120,7 +120,7 @@
   min-width: 371px;
 }
 .h9 {
-  min-width: 120px;
+  min-width: 160px;
   border-top-right-radius: 10px;
 }
 
@@ -134,4 +134,10 @@
   justify-content: center;
   align-items: center;
   column-gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .pagination {
+    column-gap: 0px;
+  }
 }
