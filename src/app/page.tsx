@@ -41,19 +41,19 @@ export default function Home() {
         onClose={() => setOpen(false)}
       /> */}
 
-      {/* <ApprovalRejection
+      <ApprovalRejection
         onClick={() => { }}
         title="승인거부 사유 확인"
         open={open}
         onClose={() => setOpen(false)}
-      /> */}
+      />
 
-      <ViewDocoment
+      {/* <ViewDocoment
         onClick={() => { }}
         title="서류 보기"
         open={open}
         onClose={() => setOpen(false)}
-      />
+      /> */}
 
     </div>
   );
