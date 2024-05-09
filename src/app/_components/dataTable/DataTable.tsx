@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react';
-import { Button, Checkbox, Pagination } from 'antd';
+import { Checkbox, Pagination } from 'antd';
 import type { CheckboxProps } from 'antd';
 import {
   DoubleRightOutlined,
@@ -34,7 +34,6 @@ const DataTable: React.FC<DataTableProps> = () => {
 
 
       <TableHead />
-      {/* table */}
       <div className={styles.tableWrapper}>
 
         <table className={styles.tableMain}>

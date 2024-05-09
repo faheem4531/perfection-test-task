@@ -15,6 +15,8 @@ body {
 
 body {
   color: #0b101a;
+  font-family: pretendard, sans-serif !important;
+  font-style: normal;
 }
 
 a {
@@ -62,8 +64,20 @@ a {
   color: #fff !important;
   background-color: #2a3958;
   border-radius: 4px;
+  width: 40px;
+  height: 40px;
+  font-weight: 700;
+  padding-top: 5px;
+}
+:where(.css-dev-only-do-not-override-1okl62o).ant-pagination .ant-pagination-item-active {
+  border: none;
+  margin-bottom: 10px;
 }
 
+:where(.css-dev-only-do-not-override-1okl62o).ant-pagination .ant-pagination-item a {
+  color: #a1a1a1;
+  font-weight: 700;
+}
 @media screen and (max-width: 600px) {
   :where(.css-dev-only-do-not-override-1okl62o).ant-menu-light .ant-menu-submenu-selected > .ant-menu-submenu-title {
     width: 150px !important;
