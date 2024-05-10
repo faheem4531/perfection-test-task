@@ -1,17 +1,19 @@
+@import '/src/app/utlis/colors.scss';
+
 .header {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 10px;
-  border-bottom: 1px solid #d7d8da;
+  border-bottom: 1px solid $borderLite1;
 
   h2 {
     font-size: 20px;
     font-weight: 600;
 
     span {
-      color: #5a616a;
+      color: $darkColor3;
       font-size: 14px;
       font-weight: 500;
     }
@@ -30,15 +32,15 @@
   align-items: center;
 
   .btnCheck {
-    background-color: #2a3958;
-    color: #ffffff;
+    background-color: $darkBackground1;
+    color: $whiteColor;
     width: 100px;
     height: 39px;
     border-radius: 10px;
 
     &:hover {
-      background-color: #232c3f !important;
-      color: #ffffff !important;
+      background-color: $darkBackground !important;
+      color: $whiteColor !important;
       border: none !important;
     }
   }
@@ -50,7 +52,7 @@
 
     p {
       margin-right: 10px;
-      color: #5a616a;
+      color: $darkColor3;
       font-size: 14px;
       font-weight: 500;
     }

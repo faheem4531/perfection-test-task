@@ -1,12 +1,13 @@
+@import '/src/app/utlis/colors.scss';
+
 .subMenu {
-  // z-index: 10;
   position: relative;
-  color: #141f2d;
+  color: $darkColor2;
 }
 
 .mainMenu {
-  background-color: #fff !important;
-  color: #141f2d;
+  background-color: $whiteColor !important;
+  color: $darkColor2;
 }
 
 .item {
