@@ -62,7 +62,7 @@ const DataTable: React.FC<DataTableProps> = () => {
               {/* use class "waiting" "denied" "approved" accordingly */}
               <td><div className={`${styles.aproval} ${styles.waiting}`}>승인대기</div></td>
               <td className={styles.longText}>서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
-              <td>2023-01-10 09:00:00</td>
+              <td className={styles.h9Data}>2023-01-10 09:00:00</td>
             </tr>)}
           </tbody>
 

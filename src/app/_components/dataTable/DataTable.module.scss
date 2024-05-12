@@ -117,15 +117,20 @@
   border-right: 1px solid $whiteColor;
   min-width: 86px;
 }
+
 .h8 {
   border-right: 1px solid $whiteColor;
   min-width: 371px;
 }
+
 .h9 {
-  min-width: 200px;
+  min-width: 170px;
   border-top-right-radius: 10px;
 }
 
+.h9Data {
+  // padding: 13px 29px;
+}
 .pagination {
   background-color: $liteBackground1;
   height: 60px;
