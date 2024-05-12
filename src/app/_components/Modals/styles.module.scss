@@ -316,16 +316,16 @@
 .aligment {
   display: flex;
   align-items: center;
-  padding-bottom: 20px;
+  // padding-bottom: 20px;
 }
 
 .docSlider {
-  margin: 15px;
+  margin: 15px 0px 0 15px;
   width: 100%;
   max-width: 560px;
   display: flex;
   flex-direction: column;
-  max-height: 719px;
+  max-height: 705px;
   overflow-y: auto;
 }
 
@@ -338,8 +338,8 @@
 }
 
 .docSlider::-webkit-scrollbar-thumb {
-  background-color: $darkBackground3;
   border-radius: 20px;
+  background-color: $darkBackground3;
 }
 
 .docImg {
@@ -347,10 +347,11 @@
   border: 1px solid $borderLite;
   width: 100%;
   height: 100%;
+  max-height: 645px;
   margin-bottom: 8px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
   .customModalContentDoc {
     width: 600px !important;
   }
