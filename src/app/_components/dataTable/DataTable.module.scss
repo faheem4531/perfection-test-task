@@ -60,6 +60,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 .aproval {
@@ -128,9 +129,6 @@
   border-top-right-radius: 10px;
 }
 
-.h9Data {
-  // padding: 13px 29px;
-}
 .pagination {
   background-color: $liteBackground1;
   height: 60px;

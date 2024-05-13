@@ -1,26 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Menu } from 'antd';
-import { MenuProps } from 'antd/es/menu';
 import styles from "./Menu.module.scss"
 const { SubMenu } = Menu;
 
 interface MenuItem {
-  key: string;
+  key  : string;
   label: string;
   value: string;
 }
 
 interface MenuBarProps {
-  menuItems: MenuItem[];
-  width: string;
+  menuItems          : MenuItem[];
+  width              : string;
+  selectedItem       : MenuItem;
+  handleMenuItemClick: (item: MenuItem) => void;
 }
 
-const MenuBar: React.FC<MenuBarProps> = ({ menuItems, width }) => {
-  const [selectedItem, setSelectedItem] = useState<MenuItem | null>(menuItems[0]);
-
-  const handleMenuItemClick = (item: MenuItem) => {
-    setSelectedItem(item);
-  };
+const MenuBar: React.FC<MenuBarProps> = ({ menuItems, width, selectedItem, handleMenuItemClick }) => {
 
   return (
     <Menu
