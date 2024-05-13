@@ -1,8 +1,12 @@
 'use client';
 
-import React from 'react';
+import React 	 from 'react';
 import DataTable from './_components/dataTable/DataTable';
 
 export default function Home() {
-	return <DataTable />;
+	return (
+		<div>
+			<DataTable />
+		</div>
+	);
 }
