@@ -156,7 +156,9 @@ const DataTable: React.FC<DataTableProps> = () => {
 						</tr>
 					</thead>
 					<tbody>
-						{filteredData.map((item, index) => (
+						{!filteredData.length ? <div className={styles.noData}>
+							조회 결과가 없습니다.
+						</div> : filteredData.map((item, index) => (
 							<tr
 								key={index}
 								className={styles.trData}
@@ -198,7 +200,7 @@ const DataTable: React.FC<DataTableProps> = () => {
 				</table>
 			</div>
 
-			<Pagination
+			{!!filteredData.length && <Pagination
 				prevIcon={
 					<>
 						<DoubleLeftOutlined style={iconStyle} />{' '}
@@ -214,7 +216,7 @@ const DataTable: React.FC<DataTableProps> = () => {
 				defaultCurrent={1}
 				total={50}
 				className={styles.pagination}
-			/>
+			/>}
 			<ViewDocoment
 				onClick={() => {}}
 				title='서류 보기'
