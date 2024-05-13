@@ -1,36 +1,37 @@
 'use client';
 
-import React, { useEffect, useState 			   } from 'react';
-import { Checkbox, Pagination 						 	 } from 'antd';
+import React, { useEffect, useState 	       } from 'react';
+import { Checkbox, Pagination 				   } from 'antd';
 import {
 	DoubleRightOutlined, DoubleLeftOutlined,
-	LeftOutlined, RightOutlined							 	 } from '@ant-design/icons';
+	LeftOutlined, RightOutlined			       } from '@ant-design/icons';
 	import { 
 	changeApprovalStatus, dateTime,
 	iconStyle, pagination, statuses, tableData } from '@/app/utlis/constants';
 		
-import { getStatusClassName 								 } from '@/app/utlis/utils';
-import { DataTableProps, Member, MenuItem 	 } from '@/app/utlis/interface';
-import styles 															   from './DataTable.module.scss';
-import TableHead 														   from '../tableHeader/Header';
-import ViewDocoment 												   from '../Modals/ViewDocoment';
-import BasicModal 													   from '../Modals/BasicModal';
-import ApprovalRejection 										   from '../Modals/ApprovalRejection';
+import { getStatusClassName 				   } from '@/app/utlis/utils';
+import { DataTableProps, Member, MenuItem 	   } from '@/app/utlis/interface';
+import styles 								     from './DataTable.module.scss';
+import TableHead 								 from '../tableHeader/Header';
+import ViewDocoment 							 from '../Modals/ViewDocoment';
+import Tab 									     from '../Tab/Tab';
+import BasicModal 								 from '../Modals/BasicModal';
+import ApprovalRejection 						 from '../Modals/ApprovalRejection';
 
 const DataTable: React.FC<DataTableProps> = () => {
-	const [data, setData] 																		= useState<Member[]>(tableData);
-	const [filteredData, setFilteredData] 										= useState<Member[]>(tableData);
-	const [openViewFiles, setOpenViewFiles] 									= useState<boolean>(false);
-	const [open, setOpen] 																		= useState<boolean>(false);
+	const [data, setData] 									  = useState<Member[]>(tableData);
+	const [filteredData, setFilteredData] 					  = useState<Member[]>(tableData);
+	const [openViewFiles, setOpenViewFiles] 				  = useState<boolean>(false);
+	const [open, setOpen] 									  = useState<boolean>(false);
 	const [approvalRejectionModel, setApprovalRejectionModel] = useState<boolean>(false);
-	const [icon, setIcon] 																		= useState<string>('alert');
-	const [hasCancleBtn, setHasCancleBtn] 										= useState<boolean>(false);
-	const [modalTitle, setModalTitle] 												= useState<string>('');
-	const [selectedItems, setSelectedItems] 									= useState<Member[]>([]);
-	const [status, setStatus] 															  = useState<MenuItem>(changeApprovalStatus[0]);
-	const [statusFilter, setStatusFilter] 										= useState<MenuItem>(statuses[0]);
-	const [dateTimeFilter, setDateTimeFilter] 								= useState<MenuItem>(dateTime[0]);
-	const [paginationFilter, setPaginationFilter] 						= useState<MenuItem>(
+	const [icon, setIcon] 									  = useState<string>('alert');
+	const [hasCancleBtn, setHasCancleBtn] 					  = useState<boolean>(false);
+	const [modalTitle, setModalTitle] 						  = useState<string>('');
+	const [selectedItems, setSelectedItems] 				  = useState<Member[]>([]);
+	const [status, setStatus] 								  = useState<MenuItem>(changeApprovalStatus[0]);
+	const [statusFilter, setStatusFilter] 					  = useState<MenuItem>(statuses[0]);
+	const [dateTimeFilter, setDateTimeFilter] 				  = useState<MenuItem>(dateTime[0]);
+	const [paginationFilter, setPaginationFilter] 			  = useState<MenuItem>(
 		pagination[0]
 	);
 	const pendingItemsCount = filteredData.filter((row) => row.status === '승인대기').length;
@@ -121,6 +122,7 @@ const DataTable: React.FC<DataTableProps> = () => {
 
 	return (
 		<div className={styles.table}>
+			<Tab />
 			<TableHead
 				selectedCount={selectedItems.length}
 				pendingCount={pendingItemsCount}

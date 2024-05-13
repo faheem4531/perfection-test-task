@@ -1,0 +1,113 @@
+.tab {
+    margin-bottom: 43.7px;
+    width: 100%;
+  
+    .h2 {
+      margin-bottom: 15.9px;
+      position: relative;
+  
+      h2 {
+        font-size: 24px;
+        font-weight: 700;
+        display: inline;
+      }
+  
+      span {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #ff4d4f;
+        position: absolute;
+        left: 95px;
+        top: 3px;
+      }
+  
+      p {
+        font-size: 14px;
+        font-weight: 500;
+        color: #ff4d4f;
+        display: inline;
+        margin-left: 22px;
+      }
+    }
+  
+    .hr {
+      height: 1px;
+      width: 100%;
+      background-color: #d7d8da;
+    }
+  
+    .tabsDiv {
+      width: 100%;
+      overflow-x: scroll;
+    }
+  
+    .tabsDiv::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  
+  .tabContainer {
+    height: 39.5px;
+    background-color: #ebeef3;
+    width: 100%;
+    margin-top: 12px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 750px;
+    cursor: pointer;
+    padding-right: 12px;
+  
+    h3 {
+      font-size: 16px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 140px;
+    }
+  
+    .active {
+      width: 130px;
+      background-color: #2a3958;
+      color: #ffff;
+    }
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .tabContainer {
+      h3 {
+        font-size: 14px;
+        width: 100px;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    .tab {
+      margin-bottom: 30px;
+  
+      .h2 {
+        h2 {
+          font-size: 20px;
+        }
+  
+        span {
+          left: 85px;
+        }
+  
+        p {
+          margin-left: 25px;
+        }
+      }
+    }
+  
+    .tabContainer {
+      h3 {
+        font-size: 10px;
+        width: 100px;
+      }
+    }
+  }
