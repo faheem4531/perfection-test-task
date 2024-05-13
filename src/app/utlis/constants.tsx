@@ -566,7 +566,7 @@ export const tableData = [
 		reason: '',
 		approval_date: '2023-01-10 09:00:00',
 	},
-	{ serial_no: 97, status: '승인대기', reason: '', approval_date: '' },
+	{ serial_no: 100, status: '승인대기', reason: '', approval_date: '' },
 ];
 
 export const iconStyle = {
