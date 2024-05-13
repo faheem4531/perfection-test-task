@@ -25,6 +25,7 @@ const DataTable: React.FC<DataTableProps> = () => {
 	const [open, setOpen] 									  = useState<boolean>(false);
 	const [approvalRejectionModel, setApprovalRejectionModel] = useState<boolean>(false);
 	const [icon, setIcon] 									  = useState<string>('alert');
+	const [reason, setReason] 								  = useState<string>('')
 	const [hasCancleBtn, setHasCancleBtn] 					  = useState<boolean>(false);
 	const [modalTitle, setModalTitle] 						  = useState<string>('');
 	const [selectedItems, setSelectedItems] 				  = useState<Member[]>([]);
@@ -89,11 +90,7 @@ const DataTable: React.FC<DataTableProps> = () => {
 		setPaginationFilter(selectedStatus);
 	};
 
-	const handleSaveModel = () => {
-		if (status.value === '승인거부') {
-			setApprovalRejectionModel(true);
-			return;
-		}
+	const updateData = () => {
 		selectedItems.forEach((selectedItem) => {
 			const index = filteredData.findIndex(
 				(item) => item.serial_no === selectedItem.serial_no
@@ -103,9 +100,11 @@ const DataTable: React.FC<DataTableProps> = () => {
 			);
 			if (index !== -1) {
 				filteredData[index].status = status.value;
+				filteredData[index].reason = reason;
 			}
 			if (dataIndex !== -1) {
 				data[dataIndex].status = status.value;
+				data[dataIndex].reason = reason;
 			}
 		});
 		setData(data);
@@ -114,7 +113,24 @@ const DataTable: React.FC<DataTableProps> = () => {
 		setIcon('success');
 		setHasCancleBtn(false);
 		setModalTitle('저장되었습니다.');
+	}
+
+	const handleSaveModel = () => {
+		if (status.value === '승인거부') {
+			setApprovalRejectionModel(true);
+			return;
+		}
+		updateData()
 	};
+
+	const handleApprovalModalClose = () => {
+		setApprovalRejectionModel(false)
+		updateData()
+	}
+
+	const handleChangeReason = (e: React.ChangeEvent<HTMLInputElement>) => {
+		setReason(e.target.value)
+	}
 
 	const openViewImagesModal = () => {
 		setOpenViewFiles(true);
@@ -234,9 +250,11 @@ const DataTable: React.FC<DataTableProps> = () => {
 				onClose={() => setOpen(false)}
 			/>
 			<ApprovalRejection
-				onClick={() => {}}
+				onClick={handleApprovalModalClose}
 				title='승인거부 사유 확인'
+				reason={reason}
 				open={approvalRejectionModel}
+				handleChangeReason={handleChangeReason}
 				onClose={() => setApprovalRejectionModel(false)}
 			/>
 		</div>

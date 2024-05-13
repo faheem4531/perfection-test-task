@@ -9,14 +9,15 @@ import styles                            from "./styles.module.scss"
 const { TextArea } = Input;
 
 interface ApprovalRejectionProps {
-  open   : boolean;
-  title  : string;
-  onClick: () => void;
-  onClose: () => void
+  open              : boolean;
+  title             : string;
+  reason            : string;
+  onClick           : () => void;
+  onClose           : () => void
+  handleChangeReason: (e: any) => void
 }
 
-const ApprovalRejection: React.FC<ApprovalRejectionProps> = ({ onClick, open, onClose, title }) => {
-  const [reason, setReason] = useState<string>('')
+const ApprovalRejection: React.FC<ApprovalRejectionProps> = ({ onClick, open, onClose, title, reason, handleChangeReason }) => {
 
   const onChange: CheckboxProps['onChange'] = (e) => {
     console.log(`checked = ${e.target.checked}`);
@@ -66,13 +67,13 @@ const ApprovalRejection: React.FC<ApprovalRejectionProps> = ({ onClick, open, on
                   <Checkbox className={styles.cb} onChange={onChange}>직접 입력</Checkbox>
                   <TextArea rows={4} className={styles.textArea}
                   value={reason}
-                  onChange={(e) => setReason(e.target.value)}
+                  onChange={handleChangeReason}
                   autoSize={{ minRows: 4, maxRows: 10 }}
-                    style={{
-                      resize: 'none', height: "100px", marginTop: "10px",
-                      overflowY: "auto", backgroundColor: "#DDE0E5", border: "1px solid #B1B4BB",
-                      fontSize: "14px", lineHeight: "16.71px", padding: "10px", borderRadius: "8px"
-                    }} 
+                  style={{
+                    resize: 'none', height: "100px", marginTop: "0px",
+                    overflowY: "auto", fontSize: "14px", lineHeight: "16.71px",
+                    padding: "10px", borderRadius: "8px"
+                  }}
                     />
                 </div>
               </td>
